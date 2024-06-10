@@ -5,6 +5,12 @@
 
 點擊 http://localhost:3000
 
+
+## 教學影片
+以下的功能要如何使用可以觀看這支影片
+
+[youtube](https://www.youtube.com/watch?v=O1BC1rb6_yU)
+
 ## 優惠劵
 點擊 navbar的 user icon ，
 
