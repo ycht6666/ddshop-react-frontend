@@ -59,13 +59,6 @@ export default function ColorologyResult() {
     }
   }
 
-  useEffect(() => {
-    // 載入動畫
-    showLoader()
-    // 從資料庫抓取色彩學資料
-    fetchData()
-  }, [])
-
   const fetchData = async () => {
     // 檢查是否有colorologyData
     if (colorologyData) {
@@ -119,6 +112,13 @@ export default function ColorologyResult() {
       }
     }
   }
+
+  useEffect(() => {
+    // 載入動畫
+    showLoader()
+    // 從資料庫抓取色彩學資料
+    fetchData()
+  }, [])
 
   return (
     <>

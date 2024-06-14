@@ -26,11 +26,6 @@ export default function TarotRecommend() {
     products_url_2: '',
   })
 
-  useEffect(() => {
-    // 從資料庫抓取塔羅牌資料
-    fetchData()
-  }, [])
-
   const fetchData = async () => {
     // 檢查是否有shareData
     if (shareData) {
@@ -77,6 +72,11 @@ export default function TarotRecommend() {
       }
     }
   }
+
+  useEffect(() => {
+    // 從資料庫抓取塔羅牌資料
+    fetchData()
+  }, [])
 
   return (
     <>

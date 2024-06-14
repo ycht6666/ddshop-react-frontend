@@ -126,15 +126,6 @@ export default function Colorology() {
     },
   ]
 
-  useEffect(() => {
-    // 載入動畫
-    showLoader()
-    // 初始選項
-    setSelectedOptions(Array(8).fill(null))
-    // 從資料庫抓取優惠劵資料
-    fetchCouponData()
-  }, [])
-
   // 從資料庫抓取優惠劵資料
   const fetchCouponData = async () => {
     // 從localStorage的userIdLocalStorage中取出user.id資料
@@ -360,6 +351,15 @@ export default function Colorology() {
       setButtonDisabled(false) // 返回上一題時啟用按鈕
     }
   }
+
+  useEffect(() => {
+    // 載入動畫
+    showLoader()
+    // 初始選項
+    setSelectedOptions(Array(8).fill(null))
+    // 從資料庫抓取優惠劵資料
+    fetchCouponData()
+  }, [])
 
   return (
     <>

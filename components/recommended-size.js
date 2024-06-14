@@ -65,16 +65,6 @@ export default function RecommendedSize() {
     setOpen(false)
   }
 
-  useEffect(() => {
-    // 從localStorage的userIdLocalStorage中取出user.id資料
-    const userIdLocalStorage = JSON.parse(
-      localStorage.getItem('userIdLocalStorage')
-    )
-    if (userIdLocalStorage !== null) {
-      fetchRecommendedSizeData()
-    }
-  }, [])
-
   const fetchRecommendedSizeData = async () => {
     // 從localStorage的userIdLocalStorage中取出user.id資料
     const userIdLocalStorage = JSON.parse(
@@ -355,6 +345,16 @@ export default function RecommendedSize() {
     setGender(e.target.value)
     // console.log(setGender)
   }
+
+  useEffect(() => {
+    // 從localStorage的userIdLocalStorage中取出user.id資料
+    const userIdLocalStorage = JSON.parse(
+      localStorage.getItem('userIdLocalStorage')
+    )
+    if (userIdLocalStorage !== null) {
+      fetchRecommendedSizeData()
+    }
+  }, [])
 
   return (
     <>

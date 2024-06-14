@@ -12,10 +12,6 @@ export default function Coupon() {
   const [status, setStatus] = useState('unused') // 優惠券的使用狀態
   const [couponData, setCouponData] = useState([]) //優惠券的資料
 
-  useEffect(() => {
-    fetchCouponData()
-  }, [])
-
   const fetchCouponData = async () => {
     // 從localStorage的userIdLocalStorage中取出user.id資料
     const userIdLocalStorage = JSON.parse(
@@ -99,6 +95,10 @@ export default function Coupon() {
       setSelectedCouponType('全部優惠劵') // 切換狀態時重置選擇的 coupon_type
     }
   }
+
+  useEffect(() => {
+    fetchCouponData()
+  }, [])
 
   return (
     <>

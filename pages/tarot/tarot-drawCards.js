@@ -35,11 +35,6 @@ export default function TarotDrawCards() {
   // 檢查 tarotData 是否有抓到後端json
   // console.log('tarotData-外面:', tarotData)
 
-  useEffect(() => {
-    // 從資料庫抓取優惠劵資料
-    fetchCouponData()
-  }, [])
-
   const fetchCouponData = async () => {
     // 從localStorage的userIdLocalStorage中取出user.id資料
     const userIdLocalStorage = JSON.parse(
@@ -192,6 +187,11 @@ export default function TarotDrawCards() {
       }
     }
   }
+
+  useEffect(() => {
+    // 從資料庫抓取優惠劵資料
+    fetchCouponData()
+  }, [])
 
   return (
     <>

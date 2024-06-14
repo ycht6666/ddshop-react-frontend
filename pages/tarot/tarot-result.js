@@ -29,13 +29,6 @@ export default function TarotResult() {
     product_photos_img_2: '',
   })
 
-  useEffect(() => {
-    // 載入動畫
-    showLoader()
-    // 從資料庫抓取塔羅牌資料
-    fetchData()
-  }, [])
-
   async function fetchData() {
     // 檢查是否有shareData
     if (shareData) {
@@ -82,6 +75,13 @@ export default function TarotResult() {
       }
     }
   }
+
+  useEffect(() => {
+    // 載入動畫
+    showLoader()
+    // 從資料庫抓取塔羅牌資料
+    fetchData()
+  }, [])
 
   return (
     <>
